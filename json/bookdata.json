@@ -4,7 +4,7 @@
     "title": "Maeve Ascendant",
     "price": "5.95",
     "author": "Corets, Eva",
-    "publishDate": "2000-11-17",
+    "publish_date": "2000-11-17",
     "genre": "Fantasy"
   },
   "bk102": {
@@ -12,7 +12,7 @@
     "title": "Midnight Rain",
     "price": "5.95",
     "author": "Ralls, Kim",
-    "publishDate": "2000-12-16",
+    "publish_date": "2000-12-16",
     "genre": "Fantasy"
   },
   "bk101": {
@@ -20,7 +20,7 @@
     "title": "XML Developer's Guide",
     "price": "44.95",
     "author": "Gambardella, Matthew",
-    "publishDate": "2000-10-01",
+    "publish_date": "2000-10-01",
     "genre": "Computer"
   },
   "bk107": {
@@ -28,7 +28,7 @@
     "title": "Splish Splash",
     "price": "4.95",
     "author": "Thurman, Paula",
-    "publishDate": "2000-11-02",
+    "publish_date": "2000-11-02",
     "genre": "Romance"
   },
   "bk106": {
@@ -36,7 +36,7 @@
     "title": "Lover Birds",
     "price": "4.95",
     "author": "Randall, Cynthia",
-    "publishDate": "2000-09-02",
+    "publish_date": "2000-09-02",
     "genre": "Romance"
   },
   "bk105": {
@@ -44,7 +44,7 @@
     "title": "The Sundered Grail",
     "price": "5.95",
     "author": "Corets, Eva",
-    "publishDate": "2001-09-10",
+    "publish_date": "2001-09-10",
     "genre": "Fantasy"
   },
   "bk104": {
@@ -52,7 +52,7 @@
     "title": "Oberon's Legacy",
     "price": "5.95",
     "author": "Corets, Eva",
-    "publishDate": "2001-03-10",
+    "publish_date": "2001-03-10",
     "genre": "Fantasy"
   },
   "bk109": {
@@ -60,7 +60,7 @@
     "title": "Paradox Lost",
     "price": "6.95",
     "author": "Kress, Peter",
-    "publishDate": "2000-11-02",
+    "publish_date": "2000-11-02",
     "genre": "Science Fiction"
   },
   "bk108": {
@@ -68,7 +68,7 @@
     "title": "Creepy Crawlies",
     "price": "4.95",
     "author": "Knorr, Stefan",
-    "publishDate": "2000-12-06",
+    "publish_date": "2000-12-06",
     "genre": "Horror"
   }
 }
