@@ -1,5 +1,7 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Book {
 
     private String description;
@@ -43,10 +45,12 @@ public class Book {
         this.author = author;
     }
 
+    @JsonProperty("publish_date")
     public String getPublishDate() {
         return publishDate;
     }
 
+    @JsonProperty("publish_date")
     public void setPublishDate(String publishDate) {
         this.publishDate = publishDate;
     }
