@@ -1,5 +1,5 @@
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 import java.util.List;
@@ -7,9 +7,6 @@ import java.util.logging.Logger;
 
 import org.json.simple.parser.ParseException;
 import org.junit.BeforeClass;
-
-import static org.hamcrest.CoreMatchers.*;
-
 import org.junit.Test;
 
 import models.Book;
@@ -44,6 +41,12 @@ public class TestBookSearch {
     @Test
     public void testHashedBooksMultipleResults() {
         List<Book> foundBooks = TestBookSearch.bookSearch.getbooksFor("sandwich");
-        assertThat(foundBooks.size(), is(10));
+        assertThat(foundBooks.size(), is(9));
+    }
+
+    @Test
+    public void testHashedBooksOriginalWordHadAnApostrophe() {
+        List<Book> foundBooks = TestBookSearch.bookSearch.getbooksFor("oberons");
+        assertThat(foundBooks.size(), is(2));
     }
 }
