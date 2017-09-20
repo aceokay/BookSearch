@@ -3,6 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -11,14 +12,13 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import com.fasterxml.jackson.annotation.ObjectIdGenerators.StringIdGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import models.Book;
 
 public class BookSearch {
     private List<Book> books;
-    private Map<String, List<Book>> hashedBooksByWord;
+    private Map<String, Set<Book>> hashedBooksByWord;
 
     public BookSearch() {
         this.books = new ArrayList<>();
@@ -52,6 +52,10 @@ public class BookSearch {
         return this;
     }
 
+    /**
+     * Hashes all the books to Sets, keyed by word. Iterates over every word in a book
+     * and hashes that book under that word. Makes for O(1) retrieval time.
+     */
     private void hashBooks() {
         for (Book book : this.books) {
             // Get a complete list of all words in the book, including the title.
@@ -61,11 +65,11 @@ public class BookSearch {
 
             // Cycle through all the words in the book and has the book to each word.
             for (String word : bookWords) {
-                List<Book> hashedBooks = this.hashedBooksByWord.get(word);
+                Set<Book> hashedBooks = this.hashedBooksByWord.get(word);
 
                 // Check if this is the first entry for this word, save a new list if it is.
                 if (hashedBooks == null) {
-                    hashedBooks = new ArrayList<Book>();
+                    hashedBooks = new HashSet<Book>();
                 }
 
                 // Save the book to the list and save it back to the HashMap.
