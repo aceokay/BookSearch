@@ -7,15 +7,16 @@ Each query has a performance of O(1) as the design behind the scene is a hashtab
 
 ### Use requirements:
 1. Java 7+
-2. Gradle
+2. Gradle _(Optional if only running tests. See below)_
 
 ***
 
 ### Use:
 * Tests:
   * Option 1: Within an IDE, test as JUnit tests.
-  * *PENDING* Option 2: With Gradle installed, run the build with:
-  ```Gradle clean test```  
+  * Option 2: Without Gradle installed, run the build with the Gradle Wrapper:
+    * Unix: ```./gradlew clean test```
+    * Windows: ```gradlew clean test```
 
 ***
 
